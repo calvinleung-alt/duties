@@ -8,13 +8,11 @@ import { Layout } from "../components/layout";
 const columns: ColumnsType<ActionProps> = [
     {
         title: 'ID',
-        dataIndex: 'id',
         key: 'id',
         render: (_, { duty }) => <a>{duty.id}</a>,
     },
     {
       title: 'Name',
-      dataIndex: 'name',
       key: 'name',
       render: (_, { duty }) => <a>{duty.name}</a>,
     },
@@ -33,7 +31,7 @@ export const DutyListPage = () => {
     return (
         <Layout>
             <Table
-                dataSource={duties.map((duty) => ({
+                dataSource={duties.map<ActionProps>((duty) => ({
                     duty,
                     onDelete: fetchDuties,
                 }))}

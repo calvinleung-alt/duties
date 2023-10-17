@@ -2,7 +2,7 @@
 
 ## Prerequisites
 - docker
-- docker compose
+- docker-compose
 
 ## Start Application
 ```

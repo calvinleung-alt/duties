@@ -33,9 +33,9 @@ Run sql command within `psql/init.sql`
 
 ### Build Application
 ```
+$ npm install
 $ npm run build
 ```
-
 Verify
 - Check if `main.js` exists in `build` folder
 - Check if `bundle.js` exists in `public` folder

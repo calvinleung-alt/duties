@@ -45,7 +45,7 @@ Verify
 $ npm run start
 ```
 
-Alias
+Alias to
 ```
 $ node ./build/main.js
 ```

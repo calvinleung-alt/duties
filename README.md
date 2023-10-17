@@ -17,8 +17,7 @@ Open browser and check `localhost:8080`
 - node:18
 
 ### Setup Environment Variables
-Open `.env`
-Modify
+Open `.env` and Modify
 ```
 PG_USER=
 PG_PASSWORD=
@@ -30,11 +29,21 @@ PORT=8080
 ```
 
 ### Build Application
+#### Command
 ```
 $ npm run build
 ```
+#### Verify
+- Check if file `main.js` exists in `build` folder
+- Check if file `bundle.js` exists in `public` folder
 
 ### Start Application
+#### Command
 ```
 $ npm run start
+```
+
+#### Alias
+```
+$ node ./build/main.js
 ```

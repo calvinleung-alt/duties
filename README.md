@@ -28,22 +28,24 @@ PG_PORT=5432
 PORT=8080
 ```
 
+### Initialize and Create Table in Postgres
+Run sql command within `psql/init.sql`
+
 ### Build Application
-#### Command
 ```
 $ npm run build
 ```
-#### Verify
-- Check if file `main.js` exists in `build` folder
-- Check if file `bundle.js` exists in `public` folder
+
+Verify
+- Check if `main.js` exists in `build` folder
+- Check if `bundle.js` exists in `public` folder
 
 ### Start Application
-#### Command
 ```
 $ npm run start
 ```
 
-#### Alias
+Alias
 ```
 $ node ./build/main.js
 ```

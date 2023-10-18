@@ -6,7 +6,7 @@
 
 ## Start Application
 ```
-$ docker compose up
+docker compose up
 ```
 
 Open browser and check `localhost:8080`
@@ -33,8 +33,8 @@ Run sql command within `psql/init.sql`
 
 ### Build Application
 ```
-$ npm install
-$ npm run build
+npm install
+npm run build
 ```
 Verify
 - Check if `main.js` exists in `build` folder
@@ -42,10 +42,15 @@ Verify
 
 ### Start Application
 ```
-$ npm run start
+npm run start
 ```
 
 Alias to
 ```
-$ node ./build/main.js
+node ./build/main.js
+```
+
+### Testing
+```
+npm run test
 ```

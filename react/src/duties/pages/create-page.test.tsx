@@ -12,7 +12,6 @@ jest.mock("../hooks/use-duties", () => ({
 
 test("rendered", async () => {
     render(
-
         <BrowserRouter>
             <DutyCreatePage/>
         </BrowserRouter>

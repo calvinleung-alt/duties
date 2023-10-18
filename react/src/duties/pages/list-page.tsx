@@ -23,7 +23,7 @@ const columns: ColumnsType<ActionProps> = [
     },
 ];
 
-export const DutyListPage = () => {
+export const DutyListPage: React.FC<{}> = () => {
     const { duties, fetchDuties } = useDuties();
     useEffect(() => {
         fetchDuties();
@@ -31,6 +31,7 @@ export const DutyListPage = () => {
     return (
         <Layout>
             <Table
+                aria-label="table"
                 dataSource={duties.map<ActionProps>((duty) => ({
                     duty,
                     onDelete: fetchDuties,

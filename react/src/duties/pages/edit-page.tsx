@@ -4,16 +4,17 @@ import { useLocation, useNavigate, useParams } from 'react-router';
 import { DutyForm } from '../components/form';
 import { Layout } from '../components/layout';
 
-export const DutyEditPage = () => {
+export const DutyEditPage: React.FC<{}> = () => {
     const { id } = useParams<{ id: string }>();
     const { state } = useLocation();
     const { updateDuty } = useDuties();
     const navigate = useNavigate();
     return (
         <Layout>
-            <DutyForm 
+            <DutyForm
+                aria-label="duty-form"
                 valueInit={state}
-                btnText={"Update"}
+                btnText="Update"
                 onFinish={async (value, message) => {
                     if (!id) return;
                     await updateDuty(id, value);

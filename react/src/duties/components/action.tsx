@@ -1,7 +1,8 @@
 import React from "react";
 import { Duty, useDuties } from "../hooks/use-duties";
-import { Space, message } from "antd";
+import { Space } from "antd";
 import { Link } from "react-router-dom";
+import { useMessage } from "../hooks/use-message";
 
 export interface ActionProps {
     duty: Duty;
@@ -10,13 +11,13 @@ export interface ActionProps {
 
 export const Action: React.FC<ActionProps> = ({ duty, onDelete }) => {
     const { deleteDuty } = useDuties();
-    const [messageApi,contextHolder] = message.useMessage();
+    const [messageApi, contextHolder] = useMessage();
     return (
         <>
             {contextHolder}
             <Space size="middle">
-                <Link to={`/${duty.id}/edit`} state={duty}>Edit</Link>
-                <a onClick={async () => {
+                <Link aria-label="edit-link" to={`/${duty.id}/edit`} state={duty}>Edit</Link>
+                <a aria-label="delete-link" onClick={async () => {
                     await deleteDuty(String(duty.id));
                     messageApi.open({
                         type: "success",

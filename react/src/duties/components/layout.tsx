@@ -9,8 +9,8 @@ export interface LayoutProps {
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
     const location = useLocation();
     return (
-        <div>
-            <Typography.Title>Duties</Typography.Title>
+        <div aria-label="layout">
+            <Typography.Title aria-label="title">Duties</Typography.Title>
             <Space size={"middle"} direction={"vertical"}>
                 <Menu
                     mode={"horizontal"}
@@ -19,13 +19,13 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                         {
                             key: '/',
                             label: (
-                                <Link to={'/'}>Home</Link>
+                                <Link aria-label="home-link" to={'/'}>Home</Link>
                             ),
                         },
                         {
                             key: '/new',
                             label: (
-                                <Link to={'/new'}>New</Link>
+                                <Link aria-label="new-link" to={'/new'}>New</Link>
                             ),
                         }
                     ]}

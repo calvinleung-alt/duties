@@ -4,7 +4,7 @@
   "description": "",
   "main": "./build/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "tsc:root": "tsc --project ./tsconfig.json",
     "webpack:react": "webpack --config ./react/webpack.config.js",
     "build": "npm run tsc:root && npm run webpack:react",
@@ -20,9 +20,14 @@
     "express": "^4.18.2",
     "pg": "^8.11.3",
     "react-router": "^6.17.0",
-    "react-router-dom": "^6.17.0"
+    "react-router-dom": "^6.17.0",
+    "supertest": "^6.3.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@jest/globals": "^29.7.0",
     "@types/antd": "^1.0.0",
     "@types/express": "^4.17.19",
     "@types/node": "^20.8.6",
@@ -31,6 +36,9 @@
     "@types/react-dom": "^18.2.13",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
+    "@types/supertest": "^2.0.14",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
     "ts-loader": "^9.5.0",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0",

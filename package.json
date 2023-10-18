@@ -10,8 +10,7 @@
     "tsc:root": "tsc --project ./tsconfig.json",
     "webpack:react": "webpack --config ./react/webpack.config.js",
     "build": "npm run tsc:root && npm run webpack:react",
-    "start": "node ./build/main.js",
-    "reload": "npm run build && npm run start"
+    "start": "node ./build/main.js"
   },
   "author": "",
   "license": "ISC",
